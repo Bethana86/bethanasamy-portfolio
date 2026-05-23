@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bethanasamy Rajamani, PMP® | Senior Engineering & AI Leader Portfolio</title>
+  <meta name="description" content="E-Portfolio of Bethanasamy Rajamani, PMP® - Senior Engineering & AI Leader specializing in Forward Deployed Engineering, Generative AI, Agentic workflows, and MLOps.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Styling -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+  <!-- Interactive Canvas Background -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Navigation Header -->
+  <header id="main-header" class="glass-nav">
+    <div class="nav-container">
+      <a href="#hero" class="logo">
+        <svg class="logo-svg" viewBox="0 0 50 50">
+          <circle cx="25" cy="25" r="22" stroke="url(#logo-grad)" stroke-width="2.5" fill="none"/>
+          <path d="M15,25 Q25,12 35,25 T15,25" stroke="url(#logo-grad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <circle cx="25" cy="25" r="4" fill="#06b6d4" class="logo-pulse"/>
+          <defs>
+            <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#8b5cf6" />
+              <stop offset="100%" stop-color="#06b6d4" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="logo-text">B.Rajamani<span class="logo-accent">.AI</span></span>
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Innovations</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#credentials" class="nav-link">Credentials</a>
+        <a href="#contact" class="nav-link contact-btn">Let's Connect</a>
+      </nav>
+
+      <div class="nav-controls">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle Dark/Light Mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button id="mobile-menu-btn" class="icon-btn" aria-label="Open Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-drawer" class="glass-drawer">
+    <div class="drawer-header">
+      <span class="drawer-title">Navigation</span>
+      <button id="drawer-close" class="icon-btn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#projects" class="mobile-link">Innovations</a>
+      <a href="#skills" class="mobile-link">Skills</a>
+      <a href="#experience" class="mobile-link">Experience</a>
+      <a href="#credentials" class="mobile-link">Credentials</a>
+      <a href="#contact" class="mobile-link contact-btn-mobile">Let's Connect</a>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span> Google Cloud Certified PMLE
+        </div>
+        <h1 class="hero-title">
+          Bethanasamy Rajamani <span class="title-suffix">PMP®</span>
+        </h1>
+        <h2 class="hero-subtitle">
+          <span id="typewriter" data-words='["Senior Engineering & AI Leader", "Google Certified PMLE & GenAI Leader", "Agentic Workflows Architect", "Forward Deployed Engineer"]'></span>
+          <span class="cursor">|</span>
+        </h2>
+        <p class="hero-description">
+          **AI Architect & Forward Deployed Engineer** with over 15 years of experience bridging the gap between high-level strategy and production-grade execution. Certified **Google Cloud Professional ML Engineer**, **Generative AI Leader** and **Project Management Professional (PMP®)**, specializing in building enterprise AI through **Agentic Systems**, **Generative AI**, and **MLOps** across diverse industries including BFSI, Manufacturing, Retail and Energy.
+        </p>
+        
+        <div class="hero-badges-container">
+          <span class="pill-badge"><i class="fa-solid fa-briefcase"></i> 16+ Years Experience</span>
+          <span class="pill-badge"><i class="fa-solid fa-shield-halved"></i> PMP® Certified</span>
+          <span class="pill-badge"><i class="fa-solid fa-award"></i> LSS Master Black Belt</span>
+          <span class="pill-badge"><i class="fa-solid fa-network-wired"></i> SAFe® Agilist</span>
+          <span class="pill-badge"><i class="fa-brands fa-google"></i> GCP Certified PMLE</span>
+          <span class="pill-badge"><i class="fa-solid fa-brain"></i> Generative AI Leader</span>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">Explore Innovations <i class="fa-solid fa-arrow-trend-up"></i></a>
+          <a href="#contact" class="btn btn-secondary">Get in Touch <i class="fa-solid fa-paper-plane"></i></a>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="visual-wrapper">
+          <div class="glow-orb"></div>
+          <!-- Tech Stack Hologram -->
+          <svg class="hologram-svg" viewBox="0 0 400 400">
+            <!-- Center Sphere -->
+            <circle cx="200" cy="200" r="40" fill="url(#core-grad)" class="hologram-core"/>
+            <!-- Rotating Orbits -->
+            <ellipse cx="200" cy="200" rx="140" ry="50" fill="none" stroke="url(#orbit-grad-1)" stroke-width="1.5" transform="rotate(30, 200, 200)" class="hologram-orbit orbit-1"/>
+            <ellipse cx="200" cy="200" rx="140" ry="50" fill="none" stroke="url(#orbit-grad-2)" stroke-width="1.5" transform="rotate(-30, 200, 200)" class="hologram-orbit orbit-2"/>
+            <ellipse cx="200" cy="200" rx="140" ry="50" fill="none" stroke="url(#orbit-grad-3)" stroke-width="1.5" transform="rotate(90, 200, 200)" class="hologram-orbit orbit-3"/>
+            
+            <!-- Tech Nodes -->
+            <!-- Gemini -->
+            <g class="hologram-node node-gemini" transform="translate(200, 50)">
+              <circle r="18" fill="#1e1b4b" stroke="#8b5cf6" stroke-width="2"/>
+              <text y="4" font-size="10" text-anchor="middle" fill="#f5f3ff" font-family="'Outfit', sans-serif" font-weight="600">AI</text>
+            </g>
+            <!-- MLOps -->
+            <g class="hologram-node node-mlops" transform="translate(320, 200)">
+              <circle r="18" fill="#022c22" stroke="#10b981" stroke-width="2"/>
+              <text y="4" font-size="10" text-anchor="middle" fill="#ecfdf5" font-family="'Outfit', sans-serif" font-weight="600">OPS</text>
+            </g>
+            <!-- LSS -->
+            <g class="hologram-node node-lss" transform="translate(80, 200)">
+              <circle r="18" fill="#172554" stroke="#3b82f6" stroke-width="2"/>
+              <text y="4" font-size="10" text-anchor="middle" fill="#eff6ff" font-family="'Outfit', sans-serif" font-weight="600">PEX</text>
+            </g>
+            <!-- Cloud -->
+            <g class="hologram-node node-cloud" transform="translate(200, 350)">
+              <circle r="18" fill="#083344" stroke="#06b6d4" stroke-width="2"/>
+              <text y="4" font-size="10" text-anchor="middle" fill="#ecfeff" font-family="'Outfit', sans-serif" font-weight="600">GCP</text>
+            </g>
+
+            <defs>
+              <linearGradient id="core-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#8b5cf6" />
+                <stop offset="100%" stop-color="#3b82f6" />
+              </linearGradient>
+              <linearGradient id="orbit-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.8"/>
+                <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.1"/>
+              </linearGradient>
+              <linearGradient id="orbit-grad-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.8"/>
+                <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.1"/>
+              </linearGradient>
+              <linearGradient id="orbit-grad-3" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#10b981" stop-opacity="0.8"/>
+                <stop offset="100%" stop-color="#10b981" stop-opacity="0.1"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Strategic Pillars Section -->
+  <section id="about" class="about-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Executive Summary</span>
+        <h2 class="section-title">Pillars of Strategic Leadership</h2>
+        <div class="title-underline"></div>
+        <p class="section-lead">
+          Combining 16+ years of process rigour, Google Certified PMLE engineering, and Generative AI leadership to scale autonomous agentic systems across global enterprises.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        <!-- Pillar 1 -->
+        <div class="pillar-card glass-card">
+          <div class="pillar-icon violet-glow">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <h3 class="pillar-title">Forward Deployed AI & Agentic Orchestration</h3>
+          <p class="pillar-desc">
+            Designing and deploying autonomous multi-agent frameworks, Agent Development Kit (ADK) pipelines, and LangGraph architectures that reason, act, and dynamically optimize.
+          </p>
+          <ul class="pillar-list">
+            <li>Multi-Agentic Workflows (LangGraph, CrewAI)</li>
+            <li>Advanced RAG & Vectorless RAG (PageIndex)</li>
+            <li>TimesFM & foundation time-series forecasting</li>
+            <li>Google Agent Matrix programs lead</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="pillar-card glass-card">
+          <div class="pillar-icon blue-glow">
+            <i class="fa-solid fa-server"></i>
+          </div>
+          <h3 class="pillar-title">MLOps & Enterprise Infrastructure</h3>
+          <p class="pillar-desc">
+            Architecting secure, scalable, and highly observable machine learning lifecycles on Google Cloud (Vertex AI, BigQuery) and AWS (SageMaker, ECS).
+          </p>
+          <ul class="pillar-list">
+            <li>End-to-End MLOps Pipelines (Vertex AI, SageMaker)</li>
+            <li>AI Observability (Arize Phoenix, MLflow)</li>
+            <li>Containerization & Scaling (Docker, Kubernetes)</li>
+            <li>Serverless Deployments (Cloud Run, Lambda)</li>
+          </ul>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="pillar-card glass-card">
+          <div class="pillar-icon cyan-glow">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3 class="pillar-title">Process Excellence & Continuous Improvement</h3>
+          <p class="pillar-desc">
+            Leveraging Lean Six Sigma Master Black Belt rigour and SAFe Agilist principles to engineer massive efficiency, impacting thousands of global FTEs.
+          </p>
+          <ul class="pillar-list">
+            <li>Lean Six Sigma Master Black Belt Strategy</li>
+            <li>Enterprise RPA Scale (UiPath, Automation Anywhere)</li>
+            <li>Quality Management Systems Audit (ISO 9001 / 13485)</li>
+            <li>Agile SAFe Framework & DEX Leadership</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Innovations & Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">AI Portfolio</span>
+        <h2 class="section-title">Key AI & ML Innovations</h2>
+        <div class="title-underline"></div>
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All Ecosystems</button>
+          <button class="filter-btn" data-filter="enterprise">Enterprise Products</button>
+          <button class="filter-btn" data-filter="pocs">PoVs & PoCs</button>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card glass-card" data-category="enterprise">
+          <div class="project-image-mockup gcp-gradient">
+            <div class="mockup-content">
+              <i class="fa-solid fa-network-wired project-icon"></i>
+              <span class="mockup-tag">GCP Vertex AI</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Enterprise Ecosystem</span>
+            <h3 class="project-title">Agentic Intelligence Hub</h3>
+            <h4 class="project-subtitle">Forecasting & Anomaly Detection Ecosystem</h4>
+            <p class="project-desc">
+              Leverages the Google Cloud AI Ecosystem to build an autonomous agentic hub capable of predictive analytics and proactive system health monitoring. Integrates advanced time-series foundation models with AgentOps frameworks for natural language accessibility.
+            </p>
+            <div class="project-tech-tags">
+              <span>Gemini (Vertex AI)</span>
+              <span>TimesFM</span>
+              <span>BigQuery</span>
+              <span>Google ADK</span>
+              <span>Conversational Analytics API</span>
+              <span>MLflow</span>
+              <span>Cloud Monitoring</span>
+              <span>Cloud Build</span>
+              <span>Cloud Run</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass-card" data-category="enterprise">
+          <div class="project-image-mockup aws-gradient">
+            <div class="mockup-content">
+              <i class="fa-solid fa-chart-line project-icon"></i>
+              <span class="mockup-tag">Kubernetes & MLflow</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Ecosystem Platform</span>
+            <h3 class="project-title">AI Time Series Forecasting</h3>
+            <h4 class="project-subtitle">Foundation Models Orchestration</h4>
+            <p class="project-desc">
+              High-performance forecasting pipelines using state-of-the-art Time Series Foundation Models. Orchestrates a diverse library of models to provide robust predictive capabilities across various temporal scales, moving from experimental modeling to production-grade containerized environments.
+            </p>
+            <div class="project-tech-tags">
+              <span>TimesFM</span>
+              <span>TiReX</span>
+              <span>TOTO</span>
+              <span>TimeMoE</span>
+              <span>N-HiTS</span>
+              <span>Darts Framework</span>
+              <span>Hugging Face Hub</span>
+              <span>Docker</span>
+              <span>Kubernetes</span>
+              <span>MLflow</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PoC 1 -->
+        <div class="project-card glass-card" data-category="pocs">
+          <div class="project-image-mockup poc-gradient">
+            <div class="mockup-content">
+              <i class="fa-solid fa-magnifying-glass-chart project-icon"></i>
+              <span class="mockup-tag">Langchain & Ollama</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">PoV / PoC</span>
+            <h3 class="project-title">High-Fidelity RAG Development</h3>
+            <h4 class="project-subtitle">Low-Latency Intelligent Retrieval</h4>
+            <p class="project-desc">
+              Designed end-to-end RAG pipelines using Langchain and FAISS / ChromaDB, leveraging Llama / Gemma via Ollama / Groq for low-latency serving, with custom Streamlit interfaces and MLflow for experiment tracking.
+            </p>
+            <div class="project-tech-tags">
+              <span>LangChain</span>
+              <span>FAISS</span>
+              <span>ChromaDB</span>
+              <span>Ollama</span>
+              <span>Groq</span>
+              <span>Streamlit</span>
+              <span>MLflow</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PoC 2 -->
+        <div class="project-card glass-card" data-category="pocs">
+          <div class="project-image-mockup poc-gradient-2">
+            <div class="mockup-content">
+              <i class="fa-solid fa-tree project-icon"></i>
+              <span class="mockup-tag">Vectorless RAG</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">PoV / PoC</span>
+            <h3 class="project-title">Precision Vectorless RAG</h3>
+            <h4 class="project-subtitle">Hierarchical Reasoning Pipeline</h4>
+            <p class="project-desc">
+              Implemented the PageIndex Framework to move beyond semantic similarity, utilizing Gemma / Llama to reason over document hierarchies for high-accuracy enterprise information retrieval.
+            </p>
+            <div class="project-tech-tags">
+              <span>PageIndex Framework</span>
+              <span>Gemma</span>
+              <span>Llama</span>
+              <span>MLflow</span>
+              <span>Hierarchical Reasoning</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PoC 3 -->
+        <div class="project-card glass-card" data-category="pocs">
+          <div class="project-image-mockup poc-gradient-3">
+            <div class="mockup-content">
+              <i class="fa-solid fa-sliders project-icon"></i>
+              <span class="mockup-tag">Google ADK & GEPA</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">PoV / PoC</span>
+            <h3 class="project-title">Automated Prompt Optimization (APO)</h3>
+            <h4 class="project-subtitle">Genetic-Pareto Evolution Framework</h4>
+            <p class="project-desc">
+              Architected systematic prompt evolution using the GEPA (Genetic-Pareto) framework orchestrated via the Google Agent Development Kit (ADK) to maximize system performance while reducing latency and cost.
+            </p>
+            <div class="project-tech-tags">
+              <span>GEPA Framework</span>
+              <span>Google ADK</span>
+              <span>Prompt Engineering</span>
+              <span>Cost Optimization</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PoC 4 -->
+        <div class="project-card glass-card" data-category="pocs">
+          <div class="project-image-mockup poc-gradient-4">
+            <div class="mockup-content">
+              <i class="fa-solid fa-satellite-dish project-icon"></i>
+              <span class="mockup-tag">Langgraph & Arize</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">PoV / PoC</span>
+            <h3 class="project-title">Multi-Agentic News Tracking</h3>
+            <h4 class="project-subtitle">Observability & Governance Pipeline</h4>
+            <p class="project-desc">
+              Architecting autonomous agent workflows using Langgraph and Open-Source Foundation Models to track competitor news, integrated with Arize Phoenix for advanced observability and governance.
+            </p>
+            <div class="project-tech-tags">
+              <span>Langgraph</span>
+              <span>Arize Phoenix</span>
+              <span>Competitor Intelligence</span>
+              <span>Agent Observability</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Skill Hub Section -->
+  <section id="skills" class="skills-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Competencies Matrix</span>
+        <h2 class="section-title">Technical & Leadership Skills</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="skills-layout">
+        <div class="skills-categories-nav">
+          <button class="skill-nav-btn active" data-skill-cat="ai-agentic">Agentic AI & GenAI</button>
+          <button class="skill-nav-btn" data-skill-cat="mlops-cloud">MLOps & Cloud</button>
+          <button class="skill-nav-btn" data-skill-cat="pex-agile">Process Excellence & Agile</button>
+          <button class="skill-nav-btn" data-skill-cat="automation-tools">Automation & Tools</button>
+        </div>
+
+        <div class="skills-content-panel glass-card">
+          <!-- Category 1 -->
+          <div class="skill-category-pane active" id="ai-agentic">
+            <h3 class="pane-title">Forward Deployed Agentic AI</h3>
+            <div class="skill-items-grid">
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Agentic Workflows & Multi-Agent Systems (LangGraph, CrewAI)</span>
+                  <span class="skill-percentage">95%</span>
+                </div>
+                <div class="skill-progress-bar"><span style="width: 95%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Google Agent Development Kit (ADK) & Agent Matrix</span>
+                  <span class="skill-percentage">92%</span>
+                </div>
+                <div class="skill-progress-bar"><span style="width: 92%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Generative AI LLMs (Gemini, LLaMA, DeepSeek) & Fine-tuning</span>
+                  <span class="skill-percentage">94%</span>
+                </div>
+                <div class="skill-progress-bar"><span style="width: 94%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">RAG (Retrieval-Augmented Gen) & Vectorless RAG (PageIndex)</span>
+                  <span class="skill-percentage">93%</span>
+                </div>
+                <div class="skill-progress-bar"><span style="width: 93%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Time Series Forecasting Foundation Models (TimesFM, TiReX, etc.)</span>
+                  <span class="skill-percentage">90%</span>
+                </div>
+                <div class="skill-progress-bar"><span style="width: 90%"></span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2 -->
+          <div class="skill-category-pane" id="mlops-cloud">
+            <h3 class="pane-title">MLOps, DevOps & Cloud Systems</h3>
+            <div class="skill-items-grid">
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Google Cloud AI Platform (Vertex AI, Gemini API, BigQuery)</span>
+                  <span class="skill-percentage">95%</span>
+                </div>
+                <div class="skill-progress-bar"><span style="width: 95%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">AWS ML Services (SageMaker, Lambda, ECS, Glue)</span>
+                  <span class="skill-percentage">88%</span>
+                </div>
+                <div class="skill-progress-bar"><span style="width: 88%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Containerization & Orchestration (Docker, Kubernetes)</span>
+                  <span class="skill-percentage">90%</span>
+                </div>
+                <div class="skill-progress-bar"><span style="width: 90%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">AI Observability & Tracking (Arize Phoenix, MLflow)</span>
+                  <span class="skill-percentage">93%</span>
+                </div>
+                <div class="skill-progress-bar"><span style="width: 93%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">CI/CD Platforms & Container registries (Cloud Build, Artifact Registry)</span>
+                  <span class="skill-percentage">87%</span>
+                </div>
+                <div class="skill-progress-bar"><span style="width: 87%"></span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3 -->
+          <div class="skill-category-pane" id="pex-agile">
+            <h3 class="pane-title">Process Excellence & Agile Leadership</h3>
+            <div class="skill-items-grid">
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Lean Six Sigma Master Black Belt (DMAIC, Kaizen, Statistical Analysis)</span>
+                  <span class="skill-percentage">98%</span>
+                </div>
+                <div class="skill-progress-bar"><span style="width: 98%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">PMP® Project & Program Management Rigor</span>
+                  <span class="skill-percentage">95%</span>
+                </div>
+                <div class="skill-progress-bar"><span style="width: 95%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">SAFe® Agile Transformation & Delivery Excellence</span>
+                  <span class="skill-percentage">92%</span>
+                </div>
+                <div class="skill-progress-bar"><span style="width: 92%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Quality Auditing & Regulatory Standards (ISO 9001, ISO 13485)</span>
+                  <span class="skill-percentage">88%</span>
+                </div>
+                <div class="skill-progress-bar"><span style="width: 88%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">COPC Program Management Framework</span>
+                  <span class="skill-percentage">85%</span>
+                </div>
+                <div class="skill-progress-bar"><span style="width: 85%"></span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4 -->
+          <div class="skill-category-pane" id="automation-tools">
+            <h3 class="pane-title">Intelligent Automation & Key Frameworks</h3>
+            <div class="skill-items-grid">
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">RPA Platforms (UiPath, Automation Anywhere)</span>
+                  <span class="skill-percentage">94%</span>
+                </div>
+                <div class="skill-progress-bar"><span style="width: 94%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Data Analytics & Languages (Python, PySpark, SQL)</span>
+                  <span class="skill-percentage">92%</span>
+                </div>
+                <div class="skill-progress-bar"><span style="width: 92%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Deep Learning Frameworks (TensorFlow, PyTorch)</span>
+                  <span class="skill-percentage">88%</span>
+                </div>
+                <div class="skill-progress-bar"><span style="width: 88%"></span></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-name">Enterprise Tools (JIRA, Azure DevOps, Streamlit, Tableau)</span>
+                  <span class="skill-percentage">90%</span>
+                </div>
+                <div class="skill-progress-bar"><span style="width: 90%"></span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Journey Section (Timeline) -->
+  <section id="experience" class="timeline-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Career History</span>
+        <h2 class="section-title">Professional Journey</h2>
+        <div class="title-underline"></div>
+        <p class="section-lead">Leading-edge strategic assignments at the intersection of AI, big data, and operational excellence.</p>
+      </div>
+
+      <div class="timeline-wrapper">
+        <div class="timeline-line"></div>
+
+        <!-- Node 1 -->
+        <div class="timeline-node glass-card active">
+          <div class="timeline-marker"></div>
+          <div class="timeline-header">
+            <span class="timeline-date">Nov 2025 – Present</span>
+            <h3 class="timeline-role">AI Architect (AI & Service Transformation CoE)</h3>
+            <h4 class="timeline-company">Tata Consultancy Services (TCS)</h4>
+          </div>
+          <div class="timeline-body">
+            <ul>
+              <li><strong>Strategic AI Leadership:</strong> Leading the development of Agentic AI frameworks and multi-agent systems within the enterprise AI CoE.</li>
+              <li><strong>MLOps & AgentOps Engineering:</strong> Architecting end-to-end production pipelines using GCP (Vertex AI, Gemini, BigQuery, etc.) for BFSI, Manufacturing, and Retail sectors.</li>
+              <li><strong>Observability & Reliability:</strong> Enhancing AI performance by integrating Arize Phoenix, MLflow, and open-source ecosystems.</li>
+              <li><strong>Solution Architecture:</strong> Designing scalable hybrid AI architectures for high-value RFPs, blending Google Cloud and open-source tech.</li>
+              <li><strong>Enterprise Programs:</strong> Driving the Gemini Enterprise SAGE and Agent Matrix programs in collaboration with Google Partner Management.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Node 2 -->
+        <div class="timeline-node glass-card">
+          <div class="timeline-marker"></div>
+          <div class="timeline-header">
+            <span class="timeline-date">Jul 2024 – Nov 2025</span>
+            <h3 class="timeline-role">Data Science Lead (Global Marketing Intelligence)</h3>
+            <h4 class="timeline-company">EBM PAPST India</h4>
+          </div>
+          <div class="timeline-body">
+            <ul>
+              <li><strong>GenAI & LLM Orchestration:</strong> Engineered modular AI workflows using LangGraph, CrewAI, and LangChain; managed LLMs (LLaMA, Gemini, DeepSeek) via HuggingFace Enterprise Hub, Ollama and Groq.</li>
+              <li><strong>Production ML Workflows:</strong> Deployed scalable ML solutions using Docker, MLflow, and AWS (SageMaker, Lambda, ECS, Glue).</li>
+              <li><strong>Advanced RAG & Fine-tuning:</strong> Leveraged Hugging Face Enterprise Hub for secure model hosting, versioning, and fine-tuning.</li>
+              <li><strong>Team Leadership:</strong> Managed a multidisciplinary team of Data Scientists and Engineers to deliver production-grade AI pipelines.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Node 3 -->
+        <div class="timeline-node glass-card">
+          <div class="timeline-marker"></div>
+          <div class="timeline-header">
+            <span class="timeline-date">Sep 2021 – Jun 2024</span>
+            <h3 class="timeline-role">Independent Consultant (Freelance)</h3>
+            <h4 class="timeline-company">Algostats Consulting Services</h4>
+          </div>
+          <div class="timeline-body">
+            <ul>
+              <li><strong>Product Prototyping:</strong> Prototyped and deployed AI/ML products for HR, Finance, and Healthcare using Python and AWS (SageMaker, EC2, S3, Lambda, CloudWatch).</li>
+              <li><strong>Process Transformation:</strong> Redesigned business processes using Lean Six Sigma and Agile methodologies to drive operational efficiency.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Node 4 -->
+        <div class="timeline-node glass-card">
+          <div class="timeline-marker"></div>
+          <div class="timeline-header">
+            <span class="timeline-date">Nov 2019 – Nov 2020</span>
+            <h3 class="timeline-role">Lead Data Scientist (Global Service Analytics)</h3>
+            <h4 class="timeline-company">Vestas Wind Technology</h4>
+          </div>
+          <div class="timeline-body">
+            <ul>
+              <li><strong>Predictive Maintenance:</strong> Led the turbine monitoring (VTM) development team, deploying ML models for performance optimization.</li>
+              <li><strong>Tech Stack:</strong> Developed scalable data pipelines using PySpark, TensorFlow, and AWS (EC2, CloudWatch, Lambda).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Node 5 -->
+        <div class="timeline-node glass-card">
+          <div class="timeline-marker"></div>
+          <div class="timeline-header">
+            <span class="timeline-date">Sep 2018 – Oct 2019</span>
+            <h3 class="timeline-role">Manager – RPA & Automation</h3>
+            <h4 class="timeline-company">Renault-Nissan (RNTBCI)</h4>
+          </div>
+          <div class="timeline-body">
+            <ul>
+              <li><strong>Enterprise Automation:</strong> Spearheaded AI-driven automation impacting 800+ FTEs, utilizing Computer Vision and NLP for supplier management.</li>
+              <li><strong>Continuous Improvement:</strong> Mentored Green/Black Belts to deliver measurable gains in quality and efficiency.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Node 6 -->
+        <div class="timeline-node glass-card">
+          <div class="timeline-marker"></div>
+          <div class="timeline-header">
+            <span class="timeline-date">Nov 2017 – Sep 2018</span>
+            <h3 class="timeline-role">Manager – DEX / Transformation</h3>
+            <h4 class="timeline-company">Capgemini</h4>
+          </div>
+          <div class="timeline-body">
+            <ul>
+              <li><strong>Agile Transformation:</strong> Led enterprise transformation for global accounts (1,000+ FTEs) using UiPath, JIRA, and Six Sigma Delivery Excellence Tools & Frameworks.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Collapsible Earlier Career Node -->
+        <div class="timeline-node glass-card collapsible-node" id="earlier-career-node">
+          <div class="timeline-marker trigger-icon"><i class="fa-solid fa-plus"></i></div>
+          <div class="timeline-header toggle-trigger">
+            <span class="timeline-date">2008 – 2017</span>
+            <h3 class="timeline-role">Earlier Professional History</h3>
+            <h4 class="timeline-company">Click to Expand Milestones</h4>
+          </div>
+          <div class="timeline-body collapsable-content">
+            <div class="sub-milestone">
+              <span class="sub-date">02/2016 – 11/2017</span>
+              <h5>Senior Manager – CI/PEX | Groupon</h5>
+              <p>Streamlined global customer service processes via AI/ML and RPA integration.</p>
+            </div>
+            <div class="sub-milestone">
+              <span class="sub-date">05/2013 – 02/2016</span>
+              <h5>Lean Six Sigma Black Belt | Renault-Nissan</h5>
+              <p>Facilitated full-lifecycle Kaizen and statistical ML projects.</p>
+            </div>
+            <div class="sub-milestone">
+              <span class="sub-date">05/2012 – 05/2013</span>
+              <h5>QA Lead | IBM</h5>
+              <p>Led cloud service delivery quality and ITIL framework alignment.</p>
+            </div>
+            <div class="sub-milestone">
+              <span class="sub-date">06/2011 – 05/2012</span>
+              <h5>Business Operations Analyst | HP</h5>
+              <p>Acted as BA SPOC for supply chain management software development.</p>
+            </div>
+            <div class="sub-milestone">
+              <span class="sub-date">01/2008 – 05/2011</span>
+              <h5>Sr. Quality Engineer | SFO Technologies Private Limited</h5>
+              <p>QMS (Process & Customer Quality In-Charge) in GE Healthcare & Energy Manufacturing HLA services.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Credentials & Academics Section -->
+  <section id="credentials" class="credentials-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Endorsements</span>
+        <h2 class="section-title">Education & Credentials</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="credentials-banner glass-card" style="margin-bottom: 50px; overflow: hidden; border-radius: var(--border-radius-md); border: 1px solid var(--border-color); box-shadow: 0 10px 45px var(--shadow-color);">
+        <img src="banner.png" alt="AI Practitioner - PMP, Google Cloud Certified Professional ML Engineer, Google Cloud Certified Generative AI Leader Banner" style="width: 100%; height: auto; display: block;">
+      </div>
+
+      <div class="credentials-layout">
+        <!-- Education column -->
+        <div class="edu-column">
+          <h3 class="column-title"><i class="fa-solid fa-graduation-cap text-violet"></i> Academic Background</h3>
+          
+          <div class="edu-card glass-card">
+            <span class="edu-date">2026</span>
+            <h4 class="edu-degree">Post Graduate Program in AI & ML</h4>
+            <span class="edu-school">Great Lakes Institute of Management, Chennai, India</span>
+          </div>
+
+          <div class="edu-card glass-card">
+            <span class="edu-date">2019</span>
+            <h4 class="edu-degree">Post Graduate Program in Business Analytics & Business Intelligence</h4>
+            <span class="edu-school">Great Lakes Institute of Management, Chennai, India</span>
+          </div>
+
+          <div class="edu-card glass-card">
+            <span class="edu-date">2007</span>
+            <h4 class="edu-degree">Bachelor of Engineering (B.E.) in Electronics & Instrumentation</h4>
+            <span class="edu-school">KLN College of Engineering, Madurai, India</span>
+          </div>
+        </div>
+
+        <!-- Certifications Wall -->
+        <div class="certs-column">
+          <h3 class="column-title"><i class="fa-solid fa-certificate text-cyan"></i> Professional Credentials</h3>
+          <div class="certs-grid">
+            <div class="cert-item glass-card">
+              <i class="fa-solid fa-cloud cert-icon violet-glow"></i>
+              <span class="cert-title">Professional ML Engineer</span>
+              <span class="cert-org">Google Cloud Certified</span>
+            </div>
+            <div class="cert-item glass-card">
+              <i class="fa-solid fa-brain cert-icon blue-glow"></i>
+              <span class="cert-title">Generative AI Leader</span>
+              <span class="cert-org">Google Cloud Ecosystem</span>
+            </div>
+            <div class="cert-item glass-card">
+              <i class="fa-solid fa-award cert-icon cyan-glow"></i>
+              <span class="cert-title">Google AI Ambassador</span>
+              <span class="cert-org">SAGE & Agent Matrix</span>
+            </div>
+            <div class="cert-item glass-card">
+              <i class="fa-solid fa-server cert-icon green-glow"></i>
+              <span class="cert-title">AWS Machine Learning & AI</span>
+              <span class="cert-org">Amazon Web Services</span>
+            </div>
+            <div class="cert-item glass-card">
+              <i class="fa-solid fa-shield-halved cert-icon yellow-glow"></i>
+              <span class="cert-title">PMP® Certified</span>
+              <span class="cert-org">Project Management Institute</span>
+            </div>
+            <div class="cert-item glass-card">
+              <i class="fa-solid fa-medal cert-icon red-glow"></i>
+              <span class="cert-title">LSS Master Black Belt</span>
+              <span class="cert-org">Professional Council</span>
+            </div>
+            <div class="cert-item glass-card">
+              <i class="fa-solid fa-trophy cert-icon purple-glow"></i>
+              <span class="cert-title">Process Excellence LSSBB</span>
+              <span class="cert-org">IBM Certified</span>
+            </div>
+            <div class="cert-item glass-card">
+              <i class="fa-solid fa-network-wired cert-icon orange-glow"></i>
+              <span class="cert-title">SAFe® Agilist</span>
+              <span class="cert-org">Scaled Agile Academy</span>
+            </div>
+            <div class="cert-item glass-card">
+              <i class="fa-solid fa-gears cert-icon violet-glow"></i>
+              <span class="cert-title">Advanced RPA Professional</span>
+              <span class="cert-org">UiPath & Automation Anywhere</span>
+            </div>
+            <div class="cert-item glass-card">
+              <i class="fa-solid fa-briefcase cert-icon blue-glow"></i>
+              <span class="cert-title">COPC Program Manager</span>
+              <span class="cert-org">COPC Certification</span>
+            </div>
+            <div class="cert-item glass-card">
+              <i class="fa-solid fa-check-double cert-icon cyan-glow"></i>
+              <span class="cert-title">QMS Internal Auditor</span>
+              <span class="cert-org">ISO 9001 & 13485 (GE)</span>
+            </div>
+            <div class="cert-item glass-card">
+              <i class="fa-solid fa-globe cert-icon green-glow"></i>
+              <span class="cert-title">Global Delivery Framework</span>
+              <span class="cert-org">IBM Certified (GDF)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Connect Section -->
+  <section id="contact" class="contact-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Let's Collaborate</span>
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="title-underline"></div>
+        <p class="section-lead">Have an upcoming Agentic AI rollout, enterprise MLOps challenge, or strategic process transformation?</p>
+      </div>
+
+      <div class="contact-layout">
+        <!-- Contact details -->
+        <div class="contact-info-card glass-card">
+          <h3>Contact Details</h3>
+          <p>Reach out directly for consulting projects, strategic leadership assignments, or technology partnerships.</p>
+          
+          <div class="contact-methods">
+            <div class="contact-method">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <div>
+                <h5>Location</h5>
+                <p>Chennai, Tamil Nadu, India</p>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <h5>Email</h5>
+                <p>bethana1986@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <div>
+                <h5>Alumni Network</h5>
+                <p>Great Lakes Institute of Management</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-connect">
+            <h5>Professional Socials</h5>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/bethanasamy-rajamani-pmp%C2%AE-aa265420/" target="_blank" aria-label="LinkedIn Profile" class="social-icon linkedin">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/Bethana86" target="_blank" aria-label="GitHub Profile" class="social-icon github">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Glass contact form -->
+        <form id="contact-form" class="contact-form glass-card">
+          <h3>Send a Message</h3>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="form-name">Your Name</label>
+              <input type="text" id="form-name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="form-email">Your Email</label>
+              <input type="email" id="form-email" placeholder="john@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="form-subject">Subject</label>
+            <input type="text" id="form-subject" placeholder="Enterprise Agentic AI Integration" required>
+          </div>
+
+          <div class="form-group">
+            <label for="form-message">Message</label>
+            <textarea id="form-message" rows="5" placeholder="Let's build something incredible..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+          <div id="form-feedback" class="form-feedback"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <p>&copy; 2026 Bethanasamy Rajamani, PMP®. All rights reserved.</p>
+      <div class="footer-subtext">
+        <span>Designed with extreme precision &bull; Forward Deployed AI Leadership</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript Logic -->
+  <script src="script.js"></script>
+</body>
+</html>
